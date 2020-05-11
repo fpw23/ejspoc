@@ -1,69 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
+This is a proof of concept for embedding EJS in a web app.
 
-## Available Scripts
+### Summary
+(EJS)[https://ejs.co/] is a templating language for Javascript that works like old school ASP and PHP where you use tags to transition in and out of code regions.  Anything inside of <% %> blocks will be executed and everything else will just be rendered.  Data can be passed in and is accessible within the script blocks.
 
-In the project directory, you can run:
+### Findings
+* (React-Ace)[https://github.com/securingsincity/react-ace] is the best way to go for template and code editing.  They have built in support for json and EJS formating.  The json is pretty go, the EJS is ok but could be better. 
 
-### `npm start`
+* To get the worker js stuff in React-Ace going I had to copy the js files out of the node folder directly to the public folder.  I discovered this by seeing the errors in the console log.  There is a way to do this by including them in webpack but I could not figure this out.  It has something to do with create-react-app.  When I move this to the main project I will try harder with webpack.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Conclusion
+It is possible and pretty easy to a basic report designer working using EJS and React-Ace.  Here is a demo:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+https://fpw23.github.io/ejspoc/
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-EJS Poc
