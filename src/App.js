@@ -52,8 +52,20 @@ export class AppPlain extends React.Component {
     super(props)
 
     this.state = {
-      Template: '',
-      Data: '',
+      Template: `<div>
+          <ul>
+              <% People.forEach(function(person) { %>
+                  <li><%= person %></li>
+              <% }) %>
+          </ul>
+      </div>`,
+      Data: `{
+        "People": [
+            "Jane",
+            "John",
+            "Hank"
+        ]
+      }`  ,
       VSplit: 0,
       HSplit: 0,
       Output: ''
